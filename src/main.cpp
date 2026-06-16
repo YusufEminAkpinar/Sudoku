@@ -1,4 +1,5 @@
 #include "sudoku.h"
+#include <iostream>
 
 int main (int argc, char *argv[]) {
 	(void) argc;
@@ -7,8 +8,12 @@ int main (int argc, char *argv[]) {
 	SudokuGenerator s;
 	Grid g = s.getGrid();
 
-	s.fillGrid(0);
+	s.fillGrid();
 
+	s.printGrid();
+
+	s.generatePuzzle();
+	std::cout << "\n\n\n\n" << std::endl;
 	s.printGrid();
 
 	return 0;
